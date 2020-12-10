@@ -30,3 +30,20 @@ docker-compose run app sh - c "python manage.py test"
 ```
 It is best to use ```docker-compose run``` to run one-off processes/tasks that support the services.
 
+Super user creation
+```shell
+docker-compose run app sh -c "python manage.py createsuperuser"
+```
+Create a superuser first.
+
+Go to Admin Page to add users by using superuser credential.
+
+* //localhost:8000/admin
+
+Create a new app, this create "user" structure under app
+```shell
+docker-compose run --rm app sh -c "python manage.py startapp user" 
+```
+
+
+
