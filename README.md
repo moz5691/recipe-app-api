@@ -45,5 +45,12 @@ Create a new app, this create "user" structure under app
 docker-compose run --rm app sh -c "python manage.py startapp user" 
 ```
 
+Create a new app, this create "recipe" structure under app
+```shell
+docker-compose run --rm app sh -c "python manage.py startapp recipe"
+```
 
-
+When database is changed, run migrations
+```shell
+docker-compose run app sh -c "python manage.py makemigrations"
+```
